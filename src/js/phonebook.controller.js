@@ -2,14 +2,6 @@
   'use strict';
 
   angular
-    .module('phone', []);
-
-})();
-
-(function() {
-  'use strict';
-
-  angular
     .module('phone')
     .controller('PhonebookController', PhonebookController);
 
@@ -18,5 +10,3 @@
   }
 
 })();
-
-//# sourceMappingURL=main.js.map
