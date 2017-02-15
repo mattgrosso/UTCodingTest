@@ -45,7 +45,7 @@
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
-          <td>X</td>
+          <td ng-click="phonebook.deleteContact(contact)">X</td>
           <td>Star</td>
         </tr>
       </tbody>

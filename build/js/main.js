@@ -40,6 +40,13 @@
       contact[contentType] = event.target.innerText;
     };
 
+    this.deleteContact = function deleteContact(contact) {
+      this.contactsList.splice(this.contactsList.findIndex(function findMatchingContact(element) {
+        return element === contact;
+      }),1);
+      this.message = "Contact removed.";
+    };
+
   }
 
 })();
