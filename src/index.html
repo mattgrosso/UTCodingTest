@@ -15,13 +15,13 @@
       <h2>Add New Contact</h2>
 
       <input ng-model="phonebook.newContact.firstName" type="text" name="firstName" placeholder="First Name" required>
-      <p ng-show="addContactForm.firstName.$invalid && !addContactForm.firstName.$pristine">First Name is Required</p>
+      <!-- <p ng-show="addContactForm.firstName.$invalid && !addContactForm.firstName.$pristine">First Name is Required</p> -->
 
       <input ng-model="phonebook.newContact.lastName" type="text" name="lastName" placeholder="Last Name" required>
-      <p ng-show="addContactForm.lastName.$invalid && !addContactForm.lastName.$pristine">Last Name is Required</p>
+      <!-- <p ng-show="addContactForm.lastName.$invalid && !addContactForm.lastName.$pristine">Last Name is Required</p> -->
 
       <input ng-model="phonebook.newContact.phone" type="tel" name="phoneNumber" placeholder="Phone Number" ng-pattern="/1?-?[0-9]{3}-?[0-9]{3}-?[0-9]{4}/" required>
-      <p ng-show="addContactForm.phoneNumber.$invalid && !addContactForm.phoneNumber.$pristine">Phone Number is Required</p>
+      <!-- <p ng-show="addContactForm.phoneNumber.$invalid && !addContactForm.phoneNumber.$pristine">Phone Number is Required</p> -->
 
       <button type="submit" name="button" ng-disabled="addContactForm.$invalid">Add Contact</button>
     </form>
