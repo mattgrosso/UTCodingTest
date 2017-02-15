@@ -38,9 +38,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="contact in phonebook.contactsList">
-          <td>{{contact.firstName}}</td>
-          <td>{{contact.lastName}}</td>
-          <td>{{contact.phone}}</td>
+          <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
+          <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
+          <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
           <td>X</td>
           <td>Star</td>
         </tr>

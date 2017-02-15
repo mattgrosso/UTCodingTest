@@ -11,6 +11,7 @@
 
     this.message = "";
     this.contactsList = phonebookFactory.contactsList;
+    this.editingID = null;
 
     this.newContact = {};
 
@@ -24,6 +25,12 @@
         this.message = "";
       }
     };
+
+    this.editContact = function editContact(event, contact, contentType) {
+      contact[contentType] = event.target.innerText;
+      console.log(contact);
+    };
+
   }
 
 })();

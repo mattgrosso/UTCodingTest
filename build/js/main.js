@@ -19,6 +19,7 @@
 
     this.message = "";
     this.contactsList = phonebookFactory.contactsList;
+    this.editingID = null;
 
     this.newContact = {};
 
@@ -32,6 +33,12 @@
         this.message = "";
       }
     };
+
+    this.editContact = function editContact(event, contact, contentType) {
+      contact[contentType] = event.target.innerText;
+      console.log(contact);
+    };
+
   }
 
 })();
@@ -62,6 +69,7 @@
     });
 
     if (!duplicate) {
+      contact.ID = Math.floor(Math.random()*1000000); // TODO: This is not a secure ID at all. Just a useful workaround for now. 
       contactsList.push(contact);
     }
   }
