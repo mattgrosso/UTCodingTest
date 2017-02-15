@@ -13,6 +13,7 @@
     this.contactsList = phonebookFactory.contactsList;
     this.sortColumn = 'lastName';
     this.sortReverse = false;
+    this.tableFilter = "";
 
     this.newContact = {};
 
