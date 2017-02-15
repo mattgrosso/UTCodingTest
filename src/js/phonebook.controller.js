@@ -11,7 +11,8 @@
 
     this.message = "";
     this.contactsList = phonebookFactory.contactsList;
-    this.editingID = null;
+    this.sortColumn = 'lastName';
+    this.sortReverse = false;
 
     this.newContact = {};
 
@@ -28,7 +29,6 @@
 
     this.editContact = function editContact(event, contact, contentType) {
       contact[contentType] = event.target.innerText;
-      console.log(contact);
     };
 
   }

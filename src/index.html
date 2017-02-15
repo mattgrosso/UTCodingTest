@@ -31,13 +31,13 @@
     <table>
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Phone Number</th>
+          <th ng-click="phonebook.sortColumn = 'firstName'; phonebook.sortReverse = !phonebook.sortReverse">First Name</th>
+          <th ng-click="phonebook.sortColumn = 'lastName'; phonebook.sortReverse = !phonebook.sortReverse">Last Name</th>
+          <th ng-click="phonebook.sortColumn = 'phone'; phonebook.sortReverse = !phonebook.sortReverse">Phone Number</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="contact in phonebook.contactsList">
+        <tr ng-repeat="contact in phonebook.contactsList | orderBy:phonebook.sortColumn:phonebook.sortReverse">
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>

@@ -6,7 +6,34 @@
     .factory('phonebookFactory', phonebookFactory);
 
 
-  var contactsList = [];
+  // var contactsList = [];
+
+  var contactsList = [
+    {
+      ID: 294704,
+      firstName: "Matthew",
+      lastName: "Grosso",
+      phone: "3123439740"
+    },
+    {
+      ID: 294705,
+      firstName: "Carrie",
+      lastName: "Seltzer",
+      phone: "3123439747"
+    },
+    {
+      ID: 294706,
+      firstName: "Natalie",
+      lastName: "Grosso",
+      phone: "2022914371"
+    },
+    {
+      ID: 294744,
+      firstName: "Marie",
+      lastName: "Dennis",
+      phone: "7034030403"
+    },
+  ];
 
   function phonebookFactory() {
     return {
@@ -24,7 +51,7 @@
     });
 
     if (!duplicate) {
-      contact.ID = Math.floor(Math.random()*1000000); // TODO: This is not a secure ID at all. Just a useful workaround for now. 
+      contact.ID = Math.floor(Math.random()*1000000); // TODO: This is not a secure ID at all. Just a useful workaround for now.
       contactsList.push(contact);
     }
   }
