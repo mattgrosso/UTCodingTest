@@ -9,6 +9,7 @@
 
   function PhonebookController(phonebookFactory) {
 
+    this.message = "";
     this.contactsList = phonebookFactory.contactsList;
 
     this.newContact = {
@@ -18,8 +19,11 @@
     };
 
     this.addContact = function addContact(contact) {
-      phonebookFactory.contactsList.push(contact);
-      console.log(phonebookFactory.contactsList);
+      var listLength = this.contactsList.length;
+      phonebookFactory.addContact(contact);
+      if (listLength === this.contactsList.length) {
+        this.message = "That contact is already included.";
+      }
     };
   }
 

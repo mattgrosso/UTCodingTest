@@ -6,16 +6,28 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body ng-controller="PhonebookController as phonebook">
+
     <header>
       <h1>UT Phonebook</h1>
     </header>
-    <form name="addContactForm" class="new-contact-form" ng-submit="phonebook.addContact(phonebook.newContact)" novalidate>
+
+    <form name="addContactForm" class="add-contact-form" ng-submit="phonebook.addContact(phonebook.newContact)" novalidate>
       <h2>Add New Contact</h2>
-      <input ng-model="phonebook.newContact.firstName" type="text" name="first-name" placeholder="First Name" required>
-      <input ng-model="phonebook.newContact.lastName" type="text" name="last-name" placeholder="Last Name" required>
-      <input ng-model="phonebook.newContact.phone" type="tel" name="phone-number" placeholder="Phone Number" required>
+
+      <input ng-model="phonebook.newContact.firstName" type="text" name="firstName" placeholder="First Name" required>
+      <p ng-show="addContactForm.firstName.$invalid && !addContactForm.firstName.$pristine">First Name is Required</p>
+
+      <input ng-model="phonebook.newContact.lastName" type="text" name="lastName" placeholder="Last Name" required>
+      <p ng-show="addContactForm.lastName.$invalid && !addContactForm.lastName.$pristine">Last Name is Required</p>
+
+      <input ng-model="phonebook.newContact.phone" type="tel" name="phoneNumber" placeholder="Phone Number" ng-pattern="/1?-?[0-9]{3}-?[0-9]{3}-?[0-9]{4}/" required>
+      <p ng-show="addContactForm.phoneNumber.$invalid && !addContactForm.phoneNumber.$pristine">Phone Number is Required</p>
+
       <button type="submit" name="button" ng-disabled="addContactForm.$invalid">Add Contact</button>
     </form>
+
+    <p ng-show="phonebook.message">{{phonebook.message}}</p>
+
     <table>
       <thead>
         <tr>
@@ -30,6 +42,7 @@
           <td>{{contact.lastName}}</td>
           <td>{{contact.phone}}</td>
           <td>X</td>
+          <td>Star</td>
         </tr>
       </tbody>
     </table>
