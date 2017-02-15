@@ -5,7 +5,37 @@
     <title>UT Phonebook</title>
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body>
-    <h1>Hello World</h1>
+  <body ng-controller="PhonebookController as phonebook">
+    <header>
+      <h1>UT Phonebook</h1>
+    </header>
+    <form name="addContactForm" class="new-contact-form" ng-submit="phonebook.addContact(phonebook.newContact)" novalidate>
+      <h2>Add New Contact</h2>
+      <input ng-model="phonebook.newContact.firstName" type="text" name="first-name" placeholder="First Name" required>
+      <input ng-model="phonebook.newContact.lastName" type="text" name="last-name" placeholder="Last Name" required>
+      <input ng-model="phonebook.newContact.phone" type="tel" name="phone-number" placeholder="Phone Number" required>
+      <button type="submit" name="button" ng-disabled="addContactForm.$invalid">Add Contact</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in phonebook.contactsList">
+          <td>{{contact.firstName}}</td>
+          <td>{{contact.lastName}}</td>
+          <td>{{contact.phone}}</td>
+          <td>X</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>
