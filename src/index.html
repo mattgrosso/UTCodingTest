@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>UT Phonebook</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700|Roboto+Slab:100,400,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body ng-controller="PhonebookController as phonebook">
 
     <header>
+      <i class="fa fa-address-card-o" aria-hidden="true"></i>
       <h1>UT Phonebook</h1>
     </header>
 
-    <form name="addContactForm" class="add-contact-form" ng-submit="phonebook.addContact(phonebook.newContact)" novalidate>
+    <form name="addContactForm" class="addContactForm" ng-submit="phonebook.addContact(phonebook.newContact)" novalidate>
       <h2>Add New Contact</h2>
 
       <input ng-model="phonebook.newContact.firstName" type="text" name="firstName" placeholder="First Name" required>
@@ -24,6 +26,8 @@
       <!-- <p ng-show="addContactForm.phoneNumber.$invalid && !addContactForm.phoneNumber.$pristine">Phone Number is Required</p> -->
 
       <button type="submit" name="button" ng-disabled="addContactForm.$invalid">Add Contact</button>
+
+      <div class="clearfix"></div>
     </form>
 
     <p ng-show="phonebook.message">{{phonebook.message}}</p>
@@ -52,6 +56,7 @@
     </table>
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
+    <script src="https://use.fontawesome.com/d0e9be0862.js"></script>
     <script src="js/main.js"></script>
 
   </body>
