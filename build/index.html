@@ -32,16 +32,14 @@
 
     <p ng-show="phonebook.message">{{phonebook.message}}</p>
 
-    <form class="filterForm">
-      <input type="text" placeholder="Filter Results" ng-model="phonebook.tableFilter">
-    </form>
-
     <table>
       <thead>
         <tr>
           <th ng-click="phonebook.sortColumn = 'firstName'; phonebook.sortReverse = !phonebook.sortReverse">First Name</th>
           <th ng-click="phonebook.sortColumn = 'lastName'; phonebook.sortReverse = !phonebook.sortReverse">Last Name</th>
           <th ng-click="phonebook.sortColumn = 'phone'; phonebook.sortReverse = !phonebook.sortReverse">Phone Number</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -49,11 +47,15 @@
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
-          <td ng-click="phonebook.deleteContact(contact)">X</td>
-          <td>Star</td>
+          <td ng-click="phonebook.deleteContact(contact)"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+          <td><i class="fa fa-star-o" aria-hidden="true"></i></td>
         </tr>
       </tbody>
     </table>
+
+    <form class="filterForm">
+      <input type="text" placeholder="Filter Results" ng-model="phonebook.tableFilter">
+    </form>
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
     <script src="https://use.fontawesome.com/d0e9be0862.js"></script>
