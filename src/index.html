@@ -47,8 +47,14 @@
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
           <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
-          <td class="deleteButton" ng-click="phonebook.deleteContact(contact)"><i class="fa fa-trash-o" aria-hidden="true"></i></td>
-          <td class="starButton"><i class="fa fa-star-o" aria-hidden="true"></i></td>
+          <td class="deleteButton" ng-click="phonebook.deleteContact(contact)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </td>
+          <td class="starButton">
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </td>
         </tr>
       </tbody>
     </table>

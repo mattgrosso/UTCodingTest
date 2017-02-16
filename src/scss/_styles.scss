@@ -89,6 +89,37 @@ table{
       &:hover > td:nth-of-type(5){
         border-right: 2px solid #5299D3;
       }
+      .deleteButton, .starButton{
+        cursor: pointer;
+      }
+      .deleteButton{
+        .fa-trash{
+          display: none;
+        }
+        &:hover{
+          color: #AD1120;
+          .fa-trash-o{
+            display: none;
+          }
+          .fa-trash{
+            display: block;
+          }
+        }
+      }
+      .starButton{
+        .fa-star{
+          display: none;
+        }
+        &:hover{
+          color: #F2ED5E;
+          .fa-star-o{
+            display: none;
+          }
+          .fa-star{
+            display: block;
+          }
+        }
+      }
     }
     tr:nth-child(even){
       background-color: #BEE7E8;
