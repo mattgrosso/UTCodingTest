@@ -58,7 +58,7 @@ table{
   border-collapse: inherit;
   box-shadow: 0 1px 20px -9px black;
   thead{
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-align: left;
     th{
       background-color: #A0D2DB;
@@ -73,8 +73,21 @@ table{
   }
   tbody{
     tr{
+      cursor: text;
       td{
-        padding: 2px 0px 2px 10px;
+        padding: 6px 0px 6px 10px;
+      }
+      td:nth-of-type(1){
+        border-left: 2px solid transparent;
+      }
+      td:nth-of-type(5){
+        border-right: 2px solid transparent;
+      }
+      &:hover > td:nth-of-type(1){
+        border-left: 2px solid #5299D3;
+      }
+      &:hover > td:nth-of-type(5){
+        border-right: 2px solid #5299D3;
       }
     }
     tr:nth-child(even){
