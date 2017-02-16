@@ -69,10 +69,14 @@ header {
   margin: auto;
   border: 2px solid #e0e0e0;
   border-radius: 3px;
-  box-shadow: 0 1px 20px -9px black; }
+  box-shadow: 0 1px 20px -9px black;
+  background-color: #2c75a2; }
   .addContactForm h2 {
     margin-bottom: 10px;
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    line-height: 1.6em;
+    color: white;
+    border-bottom: 1px white solid; }
   .addContactForm input {
     width: 29%;
     margin: 10px 1px;
@@ -87,9 +91,10 @@ header {
     color: white;
     padding: 5px 25px;
     background-color: #3ca05a;
-    border: 1px solid #e0e0e0;
+    border: 1px solid rgba(224, 224, 224, 0.25);
     box-shadow: 0 1px 20px -9px black;
-    border-radius: 3px; }
+    border-radius: 3px;
+    cursor: pointer; }
 
 table {
   width: 85%;
@@ -104,7 +109,8 @@ table {
     table thead th {
       background-color: #2c75a2;
       color: white;
-      padding: 8px 0px 8px 10px; }
+      padding: 8px 0px 8px 10px;
+      cursor: pointer; }
     table thead th:nth-of-type(1) {
       border-top-left-radius: 3px; }
     table thead th:nth-of-type(5) {
