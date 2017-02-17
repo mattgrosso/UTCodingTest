@@ -18,7 +18,7 @@
   function PhonebookController(phonebookFactory) {
 
     this.message = "";
-    this.contactsList = phonebookFactory.contactsList;
+    this.contactsList = phonebookFactory.getContactsList();
     this.sortColumn = 'lastName';
     this.sortReverse = false;
     this.tableFilter = "";
@@ -43,6 +43,7 @@
       this.contactsList.splice(this.contactsList.findIndex(function findMatchingContact(element) {
         return element === contact;
       }),1);
+      this.contactsList = phonebookFactory.getContactsList();
       this.showMessage("Contact removed.");
     };
 
@@ -108,14 +109,31 @@
       lastName: "Dennis",
       phone: "703-403-0403",
       star: 0
-    },
+    }
   ];
 
   function phonebookFactory() {
     return {
       contactsList: contactsList,
+      getContactsList: getContactsList,
       addContact: addContact
     };
+  }
+
+  function getContactsList() {
+    if (contactsList.length > 0) {
+      return contactsList;
+    } else {
+        return [
+        {
+          ID: 1,
+          firstName: "Jane",
+          lastName: "Doe",
+          phone: "555-555-5555",
+          star: 0
+        }
+      ];
+    }
   }
 
   function addContact(contact) {
