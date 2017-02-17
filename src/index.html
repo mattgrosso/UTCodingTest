@@ -13,7 +13,6 @@
         <i class="fa fa-address-card-o" aria-hidden="true"></i>
         <h1>UT Phonebook</h1>
       </header>
-
       <main>
         <form name="addContactForm" class="addContactForm" ng-class="{collapsed: phonebook.collapsed}" ng-submit="phonebook.addContact(phonebook.newContact); phonebook.resetForm(addContactForm)" novalidate>
           <h2 ng-click="phonebook.collapsed = !phonebook.collapsed">
@@ -22,16 +21,15 @@
           </h2>
           <input ng-model="phonebook.newContact.firstName" type="text" name="firstName" placeholder="First Name" required>
           <input ng-model="phonebook.newContact.lastName" type="text" name="lastName" placeholder="Last Name" required>
-          <input ng-model="phonebook.newContact.phone" type="tel" name="phoneNumber" placeholder="Phone Number" ng-pattern="/1?-?[0-9]{3}-?[0-9]{3}-?[0-9]{4}/" required>
+          <input ng-model="phonebook.newContact.phone" type="tel" name="phoneNumber" placeholder="555-555-5555" ng-pattern="/1?[-\s]?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{4}/" required>
           <button type="submit" name="button" ng-disabled="addContactForm.$invalid">Add Contact</button>
-          <div class="clearfix"></div>
         </form>
 
-        <div class="userMessage" ng-class="{visibleMessage: phonebook.message}">
+        <aside class="userMessage" ng-class="{visibleMessage: phonebook.message}">
           <i class="fa fa-comment-o" aria-hidden="true"></i>
           <p>{{phonebook.message}}</p>
           <i ng-click="phonebook.message = ''" class="fa fa-times" aria-hidden="true"></i>
-        </div>
+        </aside>
 
         <form class="filterForm">
           <input type="text" placeholder="Filter Results" ng-model="phonebook.tableFilter">
@@ -63,7 +61,7 @@
             <tr ng-repeat="contact in phonebook.contactsList | orderBy:phonebook.sortColumn:phonebook.sortReverse | filter:phonebook.tableFilter">
               <td data-label="First Name" contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
               <td data-label="Last Name" contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
-              <td data-label="Phone Number" contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
+              <td data-label="Phone Number" contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone | bcTelephone: 'format'}}</td>
               <td class="starButton" ng-click="phonebook.starContact(contact)">
                 <i ng-hide="contact.star" class="fa fa-star-o" aria-hidden="true"></i>
                 <i ng-show="contact.star" class="fa fa-star" aria-hidden="true"></i>
@@ -84,6 +82,7 @@
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
     <script src="https://use.fontawesome.com/d0e9be0862.js"></script>
+    <script src="js/angular-telephone-filter.min.js"></script>
     <script src="js/main.js"></script>
 
   </body>

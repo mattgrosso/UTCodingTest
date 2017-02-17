@@ -1,11 +1,8 @@
 {
-  "name": "ut_coding_test",
+  "name": "ut-coding-test",
   "version": "1.0.0",
   "description": "A phonebook app designed as part of a front end coding test for Unleashed Technologies.",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "build/js/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattgrosso/UTCodingTest.git"
@@ -29,6 +26,7 @@
   },
   "dependencies": {
     "angular": "^1.6.2",
+    "angular-telephone-filter": "^1.0.2",
     "harp": "^0.23.0"
   }
 }

@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('phone', []);
+    .module('phone', ['bc.TelephoneFilter']);
 
 })();

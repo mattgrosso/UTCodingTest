@@ -1,0 +1,57 @@
+.addContactForm{
+  display: block;
+  width: 500px;
+  padding: 15px 25px 7px;
+  margin: auto;
+  border: 2px solid #e0e0e0;
+  border-radius: 3px;
+  box-shadow: 0 1px 20px -9px black;
+  background-color: #2c75a2;
+  transition: height 0.5s ease;
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  h2{
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    color: white;
+    border-bottom: 1px white solid;
+    // cursor: pointer;
+  }
+  i{
+    display: inline;
+    margin-left: 5px;
+  }
+  input{
+    width: 29%;
+    margin: 10px 1px;
+    font-size: 0.8em;
+    line-height: 2.3em;
+    padding: 0px 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    outline: none;
+    &.ng-dirty.ng-invalid-required{
+      border: 2px solid #AD1120;
+    }
+    &.ng-dirty.ng-invalid-pattern{
+      border: 2px solid #AD1120;
+    }
+  }
+  button{
+    display: block;
+    float: right;
+    margin: 10px 0px;
+    font-size: 1.1em;
+    color: white;
+    padding: 5px 25px;
+    background-color: #3ca05a;
+    border: 1px solid rgba(224, 224, 224, 0.25); //This is in RGB because I added a bit of transparency.
+    box-shadow: 0 1px 20px -9px black;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}

@@ -56,9 +56,9 @@ module.exports = function(grunt) {
         },
         js:{
           expand: true,
-          src: ['**/*.js'],
+          src: ['angular-telephone-filter.min.js'],
           dest: 'build/js/',
-          cwd: 'vendor/'
+          cwd: 'node_modules/angular-telephone-filter/dist/'
         },
         img: {
           expand: true,

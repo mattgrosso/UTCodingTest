@@ -1,0 +1,51 @@
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+html, body{
+  height: 100%;
+}
+
+#wrap{
+  min-height: 100%;
+}
+
+main{
+  overflow: auto;
+	padding-bottom: 43px; //This value must match the total height of the footer.
+}
+
+.filterForm{
+  text-align: right;
+  width: 85%;
+  margin: 25px auto 0;
+  input{
+    width: 30%;
+    font-size: 0.8em;
+    line-height: 2.3em;
+    padding: 0px 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    box-shadow: 0 1px 20px -9px black;
+    outline: none;
+  }
+}
+
+footer{
+  position: relative;
+	margin-top: -43px; //This value must match the total height of the footer.
+	height: 16px;
+	clear: both;
+  display: flex;
+  justify-content: flex-end;
+  padding: 13px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  background-color: #2c75a2;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 20px -9px black;
+  a{
+    color: white;
+  }
+}
