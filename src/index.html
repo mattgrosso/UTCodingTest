@@ -58,9 +58,9 @@
           </thead>
           <tbody>
             <tr ng-repeat="contact in phonebook.contactsList | orderBy:phonebook.sortColumn:phonebook.sortReverse | filter:phonebook.tableFilter">
-              <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
-              <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
-              <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
+              <td data-label="First Name" contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
+              <td data-label="Last Name" contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
+              <td data-label="Phone Number" contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
               <td class="starButton" ng-click="phonebook.starContact(contact)">
                 <i ng-hide="contact.star" class="fa fa-star-o" aria-hidden="true"></i>
                 <i ng-show="contact.star" class="fa fa-star" aria-hidden="true"></i>
