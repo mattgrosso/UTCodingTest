@@ -23,7 +23,10 @@
           <div class="clearfix"></div>
         </form>
 
-        <p ng-show="phonebook.message">{{phonebook.message}}</p>
+        <p class="userMessage" ng-show="phonebook.message">
+          <i class="fa fa-comment-o" aria-hidden="true"></i>
+          {{phonebook.message}}
+        </p>
 
         <table>
           <thead>
