@@ -47,6 +47,11 @@
     };
   }
 
+  /**
+   * This function returns the contact list unless it is empty. Then it returns
+   * a default list.
+   * @return {Array} An array of the contacts.
+   */
   function getContactsList() {
     if (contactsList.length > 0) {
       return contactsList;
@@ -63,6 +68,11 @@
     }
   }
 
+  /**
+   * This function takes in a contact as an object, checks to see if it is a
+   * duplicate, and, if it isn't, it adds it to the contactsList array.
+   * @param {Object} contact Contact object
+   */
   function addContact(contact) {
     var duplicate = false;
     contactsList.forEach(function checkForDuplicates(each) {
@@ -79,6 +89,13 @@
     }
   }
 
+  /**
+   * This function takes in a phone number, removes any extra characters and
+   * formats the number like this: 555-555-5555.
+   * TODO: There is a better way to do this using regex.
+   * @param  {String} numberAsString A phone number
+   * @return {String}                A phone number formatted correctly
+   */
   function formatPhoneNumber(numberAsString) {
     var formatted = [];
     var splitString = numberAsString.split("");
