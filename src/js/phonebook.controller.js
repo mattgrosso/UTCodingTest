@@ -49,6 +49,10 @@
       this.message = message;
     };
 
+    this.resetForm = function resetForm(form) {
+      form.$setPristine(true);
+    };
+
   }
 
 })();

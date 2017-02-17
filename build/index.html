@@ -14,7 +14,7 @@
       </header>
 
       <main>
-        <form name="addContactForm" class="addContactForm" ng-submit="phonebook.addContact(phonebook.newContact)" novalidate>
+        <form name="addContactForm" class="addContactForm" ng-submit="phonebook.addContact(phonebook.newContact); phonebook.resetForm(addContactForm)" novalidate>
           <h2>Add New Contact</h2>
           <input ng-model="phonebook.newContact.firstName" type="text" name="firstName" placeholder="First Name" required>
           <input ng-model="phonebook.newContact.lastName" type="text" name="lastName" placeholder="Last Name" required>

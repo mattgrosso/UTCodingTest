@@ -82,7 +82,13 @@ header {
     margin: 10px 1px;
     font-size: 0.8em;
     line-height: 2.3em;
-    padding: 0px 5px; }
+    padding: 0px 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px; }
+    .addContactForm input.ng-dirty.ng-invalid-required {
+      border: 2px solid #AD1120; }
+    .addContactForm input.ng-dirty.ng-invalid-pattern {
+      border: 2px solid #AD1120; }
   .addContactForm button {
     display: block;
     float: right;
