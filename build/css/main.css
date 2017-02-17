@@ -269,6 +269,9 @@ footer {
     .addContactForm button {
       margin: 5px 0px; }
 
+  .userMessage {
+    position: fixed; }
+
   .filterForm {
     text-align: center;
     width: 95%;
