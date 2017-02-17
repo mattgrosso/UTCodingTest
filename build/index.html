@@ -23,7 +23,7 @@
           <div class="clearfix"></div>
         </form>
 
-        <p class="userMessage" ng-show="phonebook.message">
+        <p class="userMessage" ng-class="{visibleMessage: phonebook.message}">
           <i class="fa fa-comment-o" aria-hidden="true"></i>
           {{phonebook.message}}
         </p>
