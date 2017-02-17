@@ -39,6 +39,15 @@
       this.message = "Contact removed.";
     };
 
+    this.starContact = function starContact(contact) {
+      if (contact.star) {
+        contact.star = 0;
+      } else {
+        contact.star = 1;
+      }
+      console.log(contact);
+    };
+
   }
 
 })();

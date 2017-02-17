@@ -28,10 +28,21 @@
         <table>
           <thead>
             <tr>
-              <th ng-click="phonebook.sortColumn = 'firstName'; phonebook.sortReverse = !phonebook.sortReverse">First Name</th>
-              <th ng-click="phonebook.sortColumn = 'lastName'; phonebook.sortReverse = !phonebook.sortReverse">Last Name</th>
-              <th ng-click="phonebook.sortColumn = 'phone'; phonebook.sortReverse = !phonebook.sortReverse">Phone Number</th>
-              <th></th>
+              <th ng-click="phonebook.sortColumn = 'firstName'; phonebook.sortReverse = !phonebook.sortReverse">
+                First Name
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'firstName') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+              </th>
+              <th ng-click="phonebook.sortColumn = 'lastName'; phonebook.sortReverse = !phonebook.sortReverse">
+                Last Name
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'lastName') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+              </th>
+              <th ng-click="phonebook.sortColumn = 'phone'; phonebook.sortReverse = !phonebook.sortReverse">
+                Phone Number
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'phone') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+              </th>
+              <th ng-click="phonebook.sortColumn = 'star'; phonebook.sortReverse = !phonebook.sortReverse">
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'star') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+              </th>
               <th></th>
             </tr>
           </thead>
@@ -40,9 +51,9 @@
               <td contenteditable ng-blur="phonebook.editContact($event, contact, 'firstName')">{{contact.firstName}}</td>
               <td contenteditable ng-blur="phonebook.editContact($event, contact, 'lastName')">{{contact.lastName}}</td>
               <td contenteditable ng-blur="phonebook.editContact($event, contact, 'phone')">{{contact.phone}}</td>
-              <td class="starButton">
-                <i class="fa fa-star-o" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
+              <td class="starButton" ng-click="phonebook.starContact(contact)">
+                <i ng-hide="contact.star" class="fa fa-star-o" aria-hidden="true"></i>
+                <i ng-show="contact.star" class="fa fa-star" aria-hidden="true"></i>
               </td>
               <td class="deleteButton" ng-click="phonebook.deleteContact(contact)">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>

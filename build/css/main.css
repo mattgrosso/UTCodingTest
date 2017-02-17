@@ -111,6 +111,10 @@ table {
       color: white;
       padding: 8px 0px 8px 10px;
       cursor: pointer; }
+      table thead th i {
+        transition: all 0.3s ease; }
+      table thead th .caretPointDown {
+        transform: rotate3d(1, 0, 0, 180deg); }
     table thead th:nth-of-type(1) {
       border-top-left-radius: 3px; }
     table thead th:nth-of-type(5) {
@@ -141,14 +145,10 @@ table {
       table tbody tr .deleteButton:hover .fa-trash {
         display: block; }
     table tbody tr .starButton .fa-star {
-      display: none;
-      text-shadow: 0 1px 20px #676767; }
+      color: #F2ED5E;
+      text-shadow: 0 0px 7px #676767; }
     table tbody tr .starButton:hover {
-      color: #F2ED5E; }
-      table tbody tr .starButton:hover .fa-star-o {
-        display: none; }
-      table tbody tr .starButton:hover .fa-star {
-        display: block; }
+      text-shadow: 0 0px 7px #676767; }
   table tbody tr:nth-child(even) {
     background-color: #d0edff; }
 
