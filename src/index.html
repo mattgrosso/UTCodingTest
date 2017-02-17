@@ -15,8 +15,11 @@
       </header>
 
       <main>
-        <form name="addContactForm" class="addContactForm" ng-submit="phonebook.addContact(phonebook.newContact); phonebook.resetForm(addContactForm)" novalidate>
-          <h2>Add New Contact</h2>
+        <form name="addContactForm" class="addContactForm" ng-class="{collapsed: phonebook.collapsed}" ng-submit="phonebook.addContact(phonebook.newContact); phonebook.resetForm(addContactForm)" novalidate>
+          <h2 ng-click="phonebook.collapsed = !phonebook.collapsed">
+            Add New Contact
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </h2>
           <input ng-model="phonebook.newContact.firstName" type="text" name="firstName" placeholder="First Name" required>
           <input ng-model="phonebook.newContact.lastName" type="text" name="lastName" placeholder="Last Name" required>
           <input ng-model="phonebook.newContact.phone" type="tel" name="phoneNumber" placeholder="Phone Number" ng-pattern="/1?-?[0-9]{3}-?[0-9]{3}-?[0-9]{4}/" required>

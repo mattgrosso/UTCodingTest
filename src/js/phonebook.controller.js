@@ -14,6 +14,7 @@
     this.sortColumn = 'lastName';
     this.sortReverse = false;
     this.tableFilter = "";
+    this.collapsed = true;
 
     this.newContact = {};
 
@@ -53,6 +54,10 @@
       form.$setPristine(true);
     };
 
+    this.test = function test() {
+      console.log('This is a flag');
+      console.log(this.collapsed);
+    };
   }
 
 })();
