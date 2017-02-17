@@ -43,6 +43,7 @@ header{
     padding: 0px 5px;
     border: 2px solid #e0e0e0;
     border-radius: 3px;
+    outline: none;
     &.ng-dirty.ng-invalid-required{
       border: 2px solid #AD1120;
     }
@@ -99,7 +100,7 @@ header{
 
 table{
   width: 85%;
-  margin: 30px auto;
+  margin: 10px auto;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
   border-collapse: inherit;
@@ -138,6 +139,7 @@ table{
       cursor: text;
       td{
         padding: 6px 0px 6px 10px;
+        outline: none;
       }
       td:nth-of-type(1){
         border-left: 2px solid transparent;
@@ -197,6 +199,23 @@ html, body{
 main{
   overflow: auto;
 	padding-bottom: 50px; //The margin-top (inverted) and the height on the footer must match this value for the sticky footer.
+}
+
+.filterForm{
+  text-align: right;
+  width: 85%;
+  justify-content: flex-end;
+  margin: 25px auto 0;
+  input{
+    width: 30%;
+    font-size: 0.8em;
+    line-height: 2.3em;
+    padding: 0px 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    box-shadow: 0 1px 20px -9px black;
+    outline: none;
+  }
 }
 
 footer{

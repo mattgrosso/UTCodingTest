@@ -29,6 +29,10 @@
           <i ng-click="phonebook.message = ''" class="fa fa-times" aria-hidden="true"></i>
         </div>
 
+        <form class="filterForm">
+          <input type="text" placeholder="Filter Results" ng-model="phonebook.tableFilter">
+        </form>
+
         <table>
           <thead>
             <tr>
@@ -67,15 +71,11 @@
             </tr>
           </tbody>
         </table>
-
-        <form class="filterForm">
-          <input type="text" placeholder="Filter Results" ng-model="phonebook.tableFilter">
-        </form>
       </main>
     </div>
 
     <footer>
-      <p>Made by <a href="https://mattgrosso.herokuapp.com" target="_blank">Matt Grosso</a></p>
+      <p>Built by <a href="https://mattgrosso.herokuapp.com" target="_blank">Matt Grosso</a></p>
     </footer>
 
 
