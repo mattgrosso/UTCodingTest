@@ -20,6 +20,7 @@
       text-align: right;
       font-size: 1.2em;
       line-height: 1.4em;
+      cursor: pointer;
     }
     input{
       margin: 5px 1px;
@@ -108,5 +109,14 @@
     padding: 15px 30px 19px 25px;
     left: 15px;
     top: 30px;
+  }
+}
+
+@media screen and (min-width: 1201px){
+  table{
+    width: 70%;
+  }
+  .filterForm{
+    width: 70%;
   }
 }
