@@ -30,18 +30,19 @@
             <tr>
               <th ng-click="phonebook.sortColumn = 'firstName'; phonebook.sortReverse = !phonebook.sortReverse">
                 First Name
-                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'firstName') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'firstName') && phonebook.sortReverse, visibleCaret: phonebook.sortColumn === 'firstName'}" class="fa fa-caret-up" aria-hidden="true"></i>
               </th>
               <th ng-click="phonebook.sortColumn = 'lastName'; phonebook.sortReverse = !phonebook.sortReverse">
                 Last Name
-                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'lastName') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'lastName') && phonebook.sortReverse, visibleCaret: phonebook.sortColumn === 'lastName'}" class="fa fa-caret-up" aria-hidden="true"></i>
               </th>
               <th ng-click="phonebook.sortColumn = 'phone'; phonebook.sortReverse = !phonebook.sortReverse">
                 Phone Number
-                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'phone') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'phone') && phonebook.sortReverse, visibleCaret: phonebook.sortColumn === 'phone'}" class="fa fa-caret-up" aria-hidden="true"></i>
               </th>
               <th ng-click="phonebook.sortColumn = 'star'; phonebook.sortReverse = !phonebook.sortReverse">
-                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'star') && phonebook.sortReverse}" class="fa fa-caret-up" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i ng-class="{caretPointDown: (phonebook.sortColumn === 'star') && phonebook.sortReverse, visibleCaret: phonebook.sortColumn === 'star'}" class="fa fa-caret-up" aria-hidden="true"></i>
               </th>
               <th></th>
             </tr>

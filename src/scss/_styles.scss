@@ -85,6 +85,12 @@ table{
     th:nth-of-type(5){
       border-top-right-radius: 3px;
     }
+    .fa-caret-up{
+      opacity: 0;
+    }
+    .visibleCaret{
+      opacity: 1;
+    }
   }
   tbody{
     tr{
