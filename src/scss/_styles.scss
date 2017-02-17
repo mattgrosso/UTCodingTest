@@ -198,13 +198,12 @@ html, body{
 
 main{
   overflow: auto;
-	padding-bottom: 50px; //The margin-top (inverted) and the height on the footer must match this value for the sticky footer.
+	padding-bottom: 43px; //This value must match the total height of the footer.
 }
 
 .filterForm{
   text-align: right;
   width: 85%;
-  justify-content: flex-end;
   margin: 25px auto 0;
   input{
     width: 30%;
@@ -220,8 +219,8 @@ main{
 
 footer{
   position: relative;
-	margin-top: -50px; //This value (inverted), the height, and the padding on the main must match for sticky footer.
-	height: 50px; //This value, the margin-top (inverted), and the padding on the main must match for sticky footer.
+	margin-top: -43px; //This value must match the total height of the footer.
+	height: 16px;
 	clear: both;
   display: flex;
   justify-content: flex-end;

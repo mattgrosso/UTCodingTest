@@ -199,12 +199,11 @@ html, body {
 
 main {
   overflow: auto;
-  padding-bottom: 50px; }
+  padding-bottom: 43px; }
 
 .filterForm {
   text-align: right;
   width: 85%;
-  justify-content: flex-end;
   margin: 25px auto 0; }
   .filterForm input {
     width: 30%;
@@ -218,8 +217,8 @@ main {
 
 footer {
   position: relative;
-  margin-top: -50px;
-  height: 50px;
+  margin-top: -43px;
+  height: 16px;
   clear: both;
   display: flex;
   justify-content: flex-end;
@@ -235,5 +234,40 @@ footer {
 .clearfix {
   display: block;
   clear: both; }
+
+@media screen and (max-width: 600px) {
+  .addContactForm {
+    width: 100%;
+    padding: 10px 15px 7px;
+    box-sizing: border-box; }
+    .addContactForm h2 {
+      font-size: 1.2em;
+      line-height: 1.4em; }
+    .addContactForm input {
+      margin: 5px 1px;
+      width: 40%; }
+    .addContactForm input:nth-of-type(3) {
+      width: 60%; }
+    .addContactForm button {
+      margin: 5px 0px; }
+
+  .filterForm {
+    text-align: center;
+    width: 95%;
+    margin: 10px auto 0; }
+    .filterForm input {
+      width: 90%; } }
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .userMessage {
+    font-size: 1em;
+    padding: 15px 30px 19px 25px;
+    left: 15px;
+    top: 30px; } }
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  .userMessage {
+    font-size: 1em;
+    padding: 15px 30px 19px 25px;
+    left: 15px;
+    top: 30px; } }
 
 /*# sourceMappingURL=main.css.map */
