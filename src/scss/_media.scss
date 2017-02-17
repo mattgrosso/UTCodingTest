@@ -35,23 +35,33 @@
     }
     tbody{
       tr{
+        position: relative;
         font-size: 1.1em;
         td{
           display: flex;
           justify-content: space-between;
-          padding: 10px 25px;
+          padding: 10px 55px 10px 25px;
           &:nth-of-type(4){
-            display: inline;
-            float: right;
-            padding: 2px 25px 10px 0px;
+            position: relative;
+            padding: 0px;
+            i{
+              position: absolute;
+              top: -40px;
+              right: 15px;
+            }
           }
           &:nth-of-type(5){
-            display: inline;
-            float: right;
-            padding: 2px 25px 10px 0px;
+            position: relative;
+            padding: 0px;
+            i{
+              position: absolute;
+              top: -90px;
+              right: 15px;
+            }
           }
           &:before{
             content: attr(data-label);
+            font-size: 0.8em;
           }
         }
         &:hover > td:nth-of-type(1){

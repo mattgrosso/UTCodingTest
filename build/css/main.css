@@ -263,21 +263,29 @@ footer {
     table thead {
       display: none; }
     table tbody tr {
+      position: relative;
       font-size: 1.1em; }
       table tbody tr td {
         display: flex;
         justify-content: space-between;
-        padding: 10px 25px; }
+        padding: 10px 55px 10px 25px; }
         table tbody tr td:nth-of-type(4) {
-          display: inline;
-          float: right;
-          padding: 2px 25px 10px 0px; }
+          position: relative;
+          padding: 0px; }
+          table tbody tr td:nth-of-type(4) i {
+            position: absolute;
+            top: -40px;
+            right: 15px; }
         table tbody tr td:nth-of-type(5) {
-          display: inline;
-          float: right;
-          padding: 2px 25px 10px 0px; }
+          position: relative;
+          padding: 0px; }
+          table tbody tr td:nth-of-type(5) i {
+            position: absolute;
+            top: -90px;
+            right: 15px; }
         table tbody tr td:before {
-          content: attr(data-label); }
+          content: attr(data-label);
+          font-size: 0.8em; }
       table tbody tr:hover > td:nth-of-type(1) {
         border-left: 2px solid transparent; }
       table tbody tr:hover > td:nth-of-type(5) {
