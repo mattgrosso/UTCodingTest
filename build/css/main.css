@@ -236,6 +236,10 @@ footer {
   clear: both; }
 
 @media screen and (max-width: 600px) {
+  header {
+    margin-bottom: 0px;
+    font-size: 2em; }
+
   .addContactForm {
     width: 100%;
     padding: 10px 15px 7px;
