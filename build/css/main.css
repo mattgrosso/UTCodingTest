@@ -111,9 +111,17 @@ header {
   transition: all 0.3s ease; }
   .userMessage.visibleMessage {
     opacity: 1; }
+  .userMessage p {
+    display: inline; }
   .userMessage i {
     font-size: 1.7em;
     margin-right: 10px; }
+  .userMessage .fa-times {
+    position: absolute;
+    right: -7px;
+    top: 0px;
+    font-size: 1em;
+    cursor: pointer; }
 
 table {
   width: 85%;

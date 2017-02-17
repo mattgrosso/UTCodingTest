@@ -30,9 +30,7 @@
       phonebookFactory.addContact(contact);
       this.newContact = {};
       if (listLength === this.contactsList.length) {
-        this.message = "That contact is already included.";
-      } else {
-        this.message = "";
+        this.showMessage("That contact is already included.");
       }
     };
 
@@ -44,7 +42,7 @@
       this.contactsList.splice(this.contactsList.findIndex(function findMatchingContact(element) {
         return element === contact;
       }),1);
-      this.message = "Contact removed.";
+      this.showMessage("Contact removed.");
     };
 
     this.starContact = function starContact(contact) {
@@ -53,7 +51,10 @@
       } else {
         contact.star = 1;
       }
-      console.log(contact);
+    };
+
+    this.showMessage = function showMessage(message) {
+      this.message = message;
     };
 
   }

@@ -73,9 +73,19 @@ header{
   &.visibleMessage{
     opacity: 1;
   }
+  p{
+    display: inline;
+  }
   i{
     font-size: 1.7em;
     margin-right: 10px;
+  }
+  .fa-times{
+    position: absolute;
+    right: -7px;
+    top: 0px;
+    font-size: 1em;
+    cursor: pointer;
   }
 }
 
