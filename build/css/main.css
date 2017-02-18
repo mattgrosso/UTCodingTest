@@ -336,6 +336,9 @@ table {
     width: 70%; }
 
   .filterForm {
-    width: 70%; } }
+    width: 70%; }
+
+  main > p {
+    width: 65%; } }
 
 /*# sourceMappingURL=main.css.map */
