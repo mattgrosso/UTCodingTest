@@ -227,10 +227,11 @@ table {
   padding: 20px 40px 24px 30px;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
+  border-radius: 3px;
   box-shadow: 0 1px 20px -9px black;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease; }
+  transition: all 0.5s ease; }
   .userMessage.visibleMessage {
     opacity: 1;
     pointer-events: all; }
@@ -239,6 +240,8 @@ table {
   .userMessage i {
     font-size: 1.7em;
     margin-right: 10px; }
+    .userMessage i:hover {
+      text-shadow: 0 1px 20px #676767; }
   .userMessage .fa-times {
     position: absolute;
     right: -7px;

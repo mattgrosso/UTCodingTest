@@ -11,30 +11,30 @@
   var contactsList = [
     {
       ID: 294704,
-      firstName: "Matthew",
+      firstName: "Matt",
       lastName: "Grosso",
       phone: "3123439740",
       star: 0
     },
     {
       ID: 294705,
-      firstName: "Carrie",
-      lastName: "Seltzer",
-      phone: "3123439747",
+      firstName: "Unleashed",
+      lastName: "Technologies",
+      phone: "4108648980",
       star: 0
     },
     {
       ID: 294706,
-      firstName: "Natalie",
-      lastName: "Grosso",
-      phone: "2022914371",
+      firstName: "Empire",
+      lastName: "Carpet",
+      phone: "8005882300",
       star: 0
     },
     {
       ID: 294744,
-      firstName: "Marie",
-      lastName: "Dennis",
-      phone: "7034030403",
+      firstName: "Jenny",
+      lastName: "Tutone",
+      phone: "3018675309",
       star: 0
     }
   ];

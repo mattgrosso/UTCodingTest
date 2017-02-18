@@ -5,14 +5,14 @@
     .module('phone')
     .controller('PhonebookController', PhonebookController);
 
-  PhonebookController.$inject = ['phonebookFactory'];
+  PhonebookController.$inject = ['phonebookFactory', '$scope', '$timeout'];
 
-  function PhonebookController(phonebookFactory) {
-
+  function PhonebookController(phonebookFactory, $scope, $timeout) {
+    var that = this;
     this.message = "";
     this.contactsList = phonebookFactory.getContactsList();
-    this.sortColumn = 'lastName';
-    this.sortReverse = false;
+    this.sortColumn = 'firstName';
+    this.sortReverse = true;
     this.tableFilter = "";
     this.collapsed = true;
     this.newContact = {};
@@ -82,6 +82,14 @@
      */
     this.showMessage = function showMessage(message) {
       this.message = message;
+      $timeout(this.hideMessage, 2000);
+    };
+
+    /**
+     * This function clears the user message;
+     */
+    this.hideMessage = function hideMessage() {
+      that.message = "";
     };
 
     /**
