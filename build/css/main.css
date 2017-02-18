@@ -298,6 +298,9 @@ table {
         display: flex;
         justify-content: space-between;
         padding: 10px 55px 10px 25px; }
+        table tbody tr td:focus {
+          margin-right: 50px;
+          padding-right: 5px; }
         table tbody tr td:nth-of-type(4) {
           position: relative;
           padding: 0px;
@@ -313,7 +316,7 @@ table {
           pointer-events: none; }
           table tbody tr td:nth-of-type(5) i {
             position: absolute;
-            top: -90px;
+            top: -105px;
             right: 15px;
             pointer-events: all; }
         table tbody tr td:before {
