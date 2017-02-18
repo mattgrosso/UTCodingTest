@@ -300,18 +300,22 @@ table {
         padding: 10px 55px 10px 25px; }
         table tbody tr td:nth-of-type(4) {
           position: relative;
-          padding: 0px; }
+          padding: 0px;
+          pointer-events: none; }
           table tbody tr td:nth-of-type(4) i {
             position: absolute;
             top: -40px;
-            right: 15px; }
+            right: 15px;
+            pointer-events: all; }
         table tbody tr td:nth-of-type(5) {
           position: relative;
-          padding: 0px; }
+          padding: 0px;
+          pointer-events: none; }
           table tbody tr td:nth-of-type(5) i {
             position: absolute;
             top: -90px;
-            right: 15px; }
+            right: 15px;
+            pointer-events: all; }
         table tbody tr td:before {
           content: attr(data-label);
           font-size: 0.8em; }

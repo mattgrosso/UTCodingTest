@@ -63,19 +63,23 @@
           &:nth-of-type(4){
             position: relative;
             padding: 0px;
+            pointer-events: none;
             i{
               position: absolute;
               top: -40px;
               right: 15px;
+              pointer-events: all;
             }
           }
           &:nth-of-type(5){
             position: relative;
             padding: 0px;
+            pointer-events: none;
             i{
               position: absolute;
               top: -90px;
               right: 15px;
+              pointer-events: all;
             }
           }
           &:before{
